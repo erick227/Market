@@ -16,6 +16,26 @@
   	background: linear-gradient(to top,#700000, #A00000) no-repeat;
 }
 
-body {
-
+.content-pane {
+    background-color:#FFF;
+    border-radius:5px;
 }
+
+.title {
+    background: linear-gradient(to bottom, #ccc, #fff) repeat;
+    border-radius:5px;
+}
+
+.content-pane .list-group-item:last-child {
+    background: linear-gradient(to top, #ddd 25%, #fff 75%) no-repeat;
+}
+
+.content-pane > .title {
+    margin-top:10px;
+    padding: 20px;
+}
+
+a { 
+    font-family: 'Roboto Slab', serif;
+}
+

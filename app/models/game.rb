@@ -1,3 +1,3 @@
-class Game < Media
+class Game < Medium
   alias_attribute :platform, :secondary_info
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :media
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,6 +13,16 @@ Rails.application.routes.draw do
   root "home#home"
   
   get 'templates/:template' => 'templates#root'
+
+  post 'authenticate' => 'authentication#authenticate'
+  get  'login'        => 'authentication#login'
+  get  'signup'       => 'authentication#signup'
+  post 'signupHook'   => 'authentication#signupHook'
+
+  resources :users do 
+    resources :media
+  end
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

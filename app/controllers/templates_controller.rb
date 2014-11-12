@@ -17,4 +17,25 @@ class TemplatesController < ApplicationController
   def menu
 
   end
+
+  def library
+
+  end
+
+  def media
+
+  end
+  
+  def addMedia
+
+  end
+
+  def missingMedia
+
+  end
+
+  def mediumCell
+
+  end
+
 end

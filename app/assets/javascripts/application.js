@@ -19,7 +19,8 @@
 
 /* configure templating */
 _.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
+    interpolate: /\{\{(.+?)\}\}/g,
+    evaluate: /\{\|(.+?)\|\}/g
 };
 
 var templateLoader = (function (Backbone,_, $) {

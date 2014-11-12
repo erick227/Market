@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Market</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,6 +13,8 @@
 
   <script>
     window.uname = "<%= @userName %>";
+    window.uid = <%= @userId %>;
+    window.mediumId = <%= @mediaId %>;
   </script>
 </head>
 <body>

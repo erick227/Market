@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023025427) do
+ActiveRecord::Schema.define(version: 20141110204844) do
 
   create_table "media", force: true do |t|
     t.string   "title"
     t.string   "author"
-    t.string   "type"
+    t.string   "kind"
     t.string   "secondary_info"
-    t.datetime "year_created"
     t.integer  "user_id"
+    t.datetime "year_created"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141023025427) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

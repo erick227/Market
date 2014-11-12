@@ -1,4 +1,3 @@
-
 var BannerView = Backbone.View.extend({
     el: "#banner",
     initialize: function() {
@@ -13,6 +12,5 @@ var BannerView = Backbone.View.extend({
 
 
 templateLoader.on("load:templates", function () {
-    console.log("Initializing banner");
     window.bannerView = new BannerView();
 });

@@ -1,11 +1,20 @@
 <% content_for :templates do %>
 <link type="text/html" rel="import" href="/templates/banner.html" id="banner-template" />
 <link type="text/html" rel="import" href="/templates/menu.html" id="menu-template" />
+<link type="text/html" rel="import" href="/templates/library.html" id="library-template" />
+<link type="text/html" rel="import" href="/templates/media.html" id="media-template" />
+<link type="text/html" rel="import" href="/templates/addMedia.html" id="add-media-template" />
+<link type="text/html" rel="import" href="/templates/missingMedia.html" id="missing-media-template" />
+<link type="text/html" rel="import" href="/templates/mediumCell.html" id="medium-cell-template" />
 <% end %>
 
 <% content_for :backbone do %>
+<%= javascript_include_tag 'router' %>
 <%= javascript_include_tag 'banner' %>
 <%= javascript_include_tag 'menu' %>
+<%= javascript_include_tag 'library' %>
+<%= javascript_include_tag 'media' %> 
+<%= javascript_include_tag 'user' %>
 <% end %>
 
 <div id="canvas">
@@ -14,6 +23,9 @@
     <div class="row">
       <div class="col-md-4">
 	<div id="menu"></div>
+      </div>
+      <div class="col-md-8">
+	<div id="content"></div>
       </div>
     </div>
   </div>

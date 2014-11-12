@@ -1,0 +1,24 @@
+<% kind_select_options = [['Book', 1], ['Music', 2], ['Movie', 3], ['Game', 4]] %>
+<div class="content-pane">
+  <h2 class="title center-text">Add Media</h2>
+  <%= form_tag do %> 
+
+  <%= label_tag :title, "Title: ", id: "title-label" %>
+  <%= text_field_tag :title%>
+  <br />
+  
+  <%= label_tag :kind, "Type of Media: "%>
+  <%= select_tag :kind, options_for_select(kind_select_options), id: "kind" %>
+  <br />
+
+  <%= label_tag :author, "Author: ", id: "author-label" %>
+  <%= text_field_tag :author %> 
+  <br />
+
+  <%= label_tag :aux, "Genre: ", id: "aux-label" %>
+  <%= text_field_tag :aux %>
+  <br />
+
+  <%= button_tag "Create!", type: 'button', id: 'create-button' %>
+  <% end %>
+</div>
