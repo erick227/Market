@@ -2,31 +2,36 @@
 <div class="content-pane">
   <h2 class="title center-text">Add Media</h2>
   <%= form_tag do %>
+      <table><tr>
 
   <mediaType class="mediaType">
-      <%= label_tag :kind, "Type of Media: "%>
-      <%= select_tag :kind, options_for_select(kind_select_options), id: "kind" %>
-      <br />
-  </mediaType>
+      <td><%= label_tag :kind, "Type of Media: "%></td>
+      <td><%= select_tag :kind, options_for_select(kind_select_options), id: "kind" %></td>
+  </mediaType></tr>
+
 
   <field class="field">
-      <%= label_tag :title, "Title: ", id: "title-label" %>
-      <%= text_field_tag :title%>
-      <br />
+    <tr>
+      <td><%= label_tag :title, "Title: ", id: "title-label" %></td>
+      <td><%= text_field_tag :title%></td>
+      </tr>
 
+<tr>
+      <td><%= label_tag :author, "Author: ", id: "author-label" %></td>
+      <td><%= text_field_tag :author %></td>
+      </tr>
 
-      <%= label_tag :author, "Author: ", id: "author-label" %>
-      <%= text_field_tag :author %>
-      <br />
-
-      <%= label_tag :aux, "Genre: ", id: "aux-label" %>
-      <%= text_field_tag :aux %>
-      <br />
+    <tr>
+      <td><%= label_tag :aux, "Genre: ", id: "aux-label" %></td>
+      <td><%= text_field_tag :aux %></td>
+      </tr>
   </field>
 
   <buttonCreate class="buttonCreate">
-    <%= button_tag "Create!", type: 'button', id: 'create-button' %>
+    <tr><td>
+    <%= button_tag "Create!", type: 'button', id: 'create-button' %></td></tr>
   </buttonCreate>
+          </table>
 
   <% end %>
 </div>

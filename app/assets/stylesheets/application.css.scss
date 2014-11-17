@@ -53,7 +53,21 @@ a {
   margin-left: 30px;
 }
 
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 .buttonCreate {
   float: right;
   margin-right: 30px;
+}
+
+input, select, button {
+  border: 1px maroon solid;
+  background-color: lightgray;
+  font-family: sans-serif;
+  font-weight: bold;
 }
