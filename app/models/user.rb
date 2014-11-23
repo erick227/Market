@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   has_many :media
   has_secure_password
-#  has_many :library, foreign_key: 'user_id', class_name: "Medium"
+  validates :name, presence: true
+  validates :email, format: { with: /\A[A-Za-z]+@[a-z\.]+[a-z]\Z/ }
+  validates :email, uniqueness: true
+  
 end
